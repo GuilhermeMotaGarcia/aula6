@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./exerc_1.css">
+</head>
+<body>
+    <header>
+        <h1>Formulário</h1>
+    </header>
+    <main>
+        <section>  
+            <form action="">    
+                <fieldset>
+                    <h2>Entre em Contato</h2>
+                    <label for="nome">Nome: </label>
+                    <input type="text" id="nome" name="nome" required>
+                    <button type="button" class="botao">Botão 1</button>
+                    <label for="sobrenome">Sobrenome: </label>
+                    <input type="text" id="sobrenome" name="sobrenome" required>
+                    <button type="button" class="botao">Botão 2</button>
+                    <button type="button" class="botao">Botão 3</button>
+                    <button type="button" class="botao">Botão 4</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const nome = document.getElementById("nome");
+        const sobrenome = document.getElementById("sobrenome");
+        const botao = document.getElementsByClassName("botao");
+
+        // Evento para o Botão 1
+        botao[0].addEventListener("click", function () {
+            alert(nome.value);
+            console.log(nome.value);
+        });//Quando esse botão for clicado, a função dentro será executada.
+
+        // Evento para o Botão 2
+        botao[1].addEventListener("click", function () {
+            setInterval(function () {
+                // Armazenar o valor do campo nome em uma variável temporária
+                let temp = nome.value;
+                
+                // Trocar os valores de nome e sobrenome
+                nome.value = sobrenome.value;
+                sobrenome.value = temp;
+            }, 2000); // A cada 2 segundos
+        });
+
+        botao[2].addEventListener("click", function () {
+            let num_aleat = Math.floor(Math.random() * 50)
+            nome.value = num_aleat
+        })
+
+        botao[3].addEventListener("click", function () {
+            setTimeout(function () {
+                pap = prompt("Oque achou? ") 
+                nome.value = pap
+            }, 2000)
+        })
+    </script>
+</body>
+</html>
+
+<!--botao[2].addEventListener("click", function () { ... });: Adiciona um evento de clique ao terceiro botão (Botão 3). Ao clicar, a função é executada.
+Math.random(): Gera um número decimal aleatório entre 0 e 1.
+Math.floor(Math.random() * 50): Multiplica o número aleatório por 50 e arredonda-o para baixo, gerando um número inteiro entre 0 e 49.
+nome.value = num_aleat;: Atribui o número aleatório gerado ao campo "Nome".
+
+botao[3].addEventListener("click", function () { ... });: Adiciona um evento de clique ao quarto botão (Botão 4). Ao clicar, a função será executada.
+setTimeout(function() { ... }, 2000);: Aguarda 2 segundos (2000 milissegundos) antes de executar a função dentro do setTimeout().
+pap = prompt("O que achou?");: Exibe uma caixa de diálogo prompt para o usuário, solicitando que ele insira algum texto. O texto digitado é armazenado na variável pap.
+nome.value = pap;: Após 2 segundos, o valor digitado pelo usuário no prompt será atribuído ao campo "Nome"-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let v1
+        let v2
+        let cod
+
+        v1 = prompt("Insira valor 1: ")
+        v2 = prompt("Insira valor 2: ")
+        v1 = parseFloat(v1)
+        v2 = parseFloat(v2)
+
+        cod = prompt("Insira um código(1 +, 2 -, 3 *, 4 /): ")
+
+        if(cod == "1"){
+            vf = v1 + v2
+            alert("valor final é "+vf)
+        }
+        else if(cod == "2"){
+            vf = v1 - v2
+            alert("Valor final é "+vf)
+        }
+        else if(cod == "3"){
+            vf = v1 * v2
+            alert("Valor final é "+vf)
+        }
+        else if(cod == "4"){
+            vf = v1 / v2
+            alert("valor final é "+vf)
+        }
+    </script>
+</body>
+</html>
