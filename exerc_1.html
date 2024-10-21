@@ -52,7 +52,7 @@
         });
 
         botao[2].addEventListener("click", function () {
-            let num_aleat = Math.floor(Math.random() * 50)
+            let num_aleat = Math.floor(Math.random() * 50) //gera um num aleatório, multiplica por 50 e arredonda pra baixo.
             nome.value = num_aleat
         })
 
@@ -61,7 +61,7 @@
                 pap = prompt("Oque achou? ") 
                 nome.value = pap
             }, 2000)
-        })
+        })// Aqui SetTimeout demora 2 segundos para abrir a caixa de texto com a pergunta, e armazena isso no value do nome.    
     </script>
 </body>
 </html>
